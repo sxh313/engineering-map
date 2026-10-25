@@ -56,9 +56,9 @@ function createSidebar(course: CourseKey) {
       text: '跨课程入口',
       collapsed: false,
       items: [
+        { text: 'AI Agent 路线', link: '/ai/' },
         { text: '完整后端路线', link: '/fullstack/' },
         { text: '面试复习', link: '/interview/' },
-        { text: 'AI Agent 路线', link: '/ai/' },
       ],
     },
   ]
@@ -83,7 +83,9 @@ export default defineConfig({
     logo: '/logo.svg',
     siteTitle: 'sxh / engineering-map',
     nav: [
+      { text: 'AI Agent', link: '/ai/' },
       { text: '学习首页', link: '/' },
+      { text: '面试复习', link: '/interview/' },
       {
         text: 'Go Web',
         items: [
@@ -99,8 +101,6 @@ export default defineConfig({
         ],
       },
       { text: '微服务', link: '/fullstack/rpc/' },
-      { text: '面试复习', link: '/interview/' },
-      { text: 'AI Agent', link: '/ai/' },
     ],
     sidebar: {
       '/fullstack/gin/': createSidebar('gin'),
