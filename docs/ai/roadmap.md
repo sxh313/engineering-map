@@ -38,10 +38,10 @@ outline: 2
 
 只有成功截图，没有消息轨迹；工具异常会终止整个进程；无法说明停止条件。
 
-### 深读入口
+### 站内学习入口
 
-- [《深入理解 AI Agent》第 1 章](https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter1.md)：建立原理模型。
-- [zero2Agent · Agent Basic](https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-basic)：观察工程实现路径。
+- [阅读 01 · Agent 最小闭环](./handbook#stage-01)：建立原理模型。
+- [查看全部内容映射](./atlas#module-basic)：确认相关工程主题。
 
 ## 02 · 上下文工程 {#stage-02}
 
@@ -65,10 +65,10 @@ outline: 2
 
 每次实验使用不同模型或参数；只凭主观感觉判断结果；摘要后无法恢复任务约束。
 
-### 深读入口
+### 站内学习入口
 
-- [《深入理解 AI Agent》第 2 章](https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter2.md)：理解上下文、缓存与压缩。
-- [zero2Agent · Agent Basic](https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-basic)：补充可运行实验和工程视角。
+- [阅读 02 · 上下文工程](./handbook#stage-02)：理解上下文、缓存与压缩。
+- [查看 Coding Agent 与 Harness 对比](./handbook#appendix-harnesses)：补充工程视角。
 
 ## 03 · Memory 与 RAG {#stage-03}
 
@@ -92,10 +92,10 @@ outline: 2
 
 回答没有引用；只看最终文案是否顺畅；无法判断错误发生在检索还是生成阶段。
 
-### 深读入口
+### 站内学习入口
 
-- [《深入理解 AI Agent》第 3 章](https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter3.md)：建立 Memory、RAG 与知识图谱边界。
-- [zero2Agent · Agent 应用实战](https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-practice)：了解应用侧组合方式。
+- [阅读 03 · Memory 与 RAG](./handbook#stage-03)：建立记忆、检索与知识更新边界。
+- [查看七个应用实战](./handbook#appendix-practice)：了解应用侧组合方式。
 
 ## 04 · Tool、MCP 与 Skills {#stage-04}
 
@@ -119,10 +119,10 @@ outline: 2
 
 把模型生成的参数直接传给系统；使用一个布尔值笼统表示所有失败；高风险写入无需确认。
 
-### 深读入口
+### 站内学习入口
 
-- [《深入理解 AI Agent》第 4 章](https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter4.md)：理解工具分类与 MCP 边界。
-- [zero2Agent · SDK 框架](https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-sdk-frameworks)：比较不同 SDK 的 Tool Calling 实现。
+- [阅读 04 · Tool、MCP 与 Skills](./handbook#stage-04)：理解工具分类与协议边界。
+- [查看框架与 SDK 选型](./handbook#appendix-frameworks)：比较不同 Tool Calling 实现。
 
 ## 05 · Agent Runtime {#stage-05}
 
@@ -146,10 +146,10 @@ outline: 2
 
 恢复只能重新执行整个任务；会话文件等同于模型上下文；取消后后台动作仍继续运行。
 
-### 深读入口
+### 站内学习入口
 
-- [《深入理解 AI Agent》第 5 章](https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter5.md)：理解 Coding Agent 与通用 Agent 的系统边界。
-- [zero2Agent · Pi Coding Agent](https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-pi)：观察 Session、恢复和可嵌入 Runtime。
+- [阅读 05 · Agent Runtime](./handbook#stage-05)：理解状态、恢复与生命周期。
+- [查看 Coding Agent 与 Harness 对比](./handbook#appendix-harnesses)：比较 Session 与 Runtime 设计。
 
 ## 06 · Coding Agent 与交互 {#stage-06}
 
@@ -173,10 +173,10 @@ outline: 2
 
 直接整文件覆盖；没有可审查 Diff；任务成功完全依赖模型自我评价。
 
-### 深读入口
+### 站内学习入口
 
-- [《深入理解 AI Agent》第 6 章](https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter6.md)：理解异步、语音、Computer Use 与动作空间。
-- [zero2Agent · Codex CLI](https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-codex)：观察终端 Agent 的沙箱、配置与工具边界。
+- [阅读 06 · Coding Agent 与交互](./handbook#stage-06)：理解文件、终端、异步和 Computer Use。
+- [查看 Coding Agent 与 Harness 对比](./handbook#appendix-harnesses)：比较沙箱、配置与工具边界。
 
 ## 07 · 评估与可观测性 {#stage-07}
 
@@ -200,10 +200,10 @@ outline: 2
 
 只展示平均分；修改评估集来迁就当前版本；运行结果无法追溯到模型、提示或代码版本。
 
-### 深读入口
+### 站内学习入口
 
-- [《深入理解 AI Agent》第 7 章](https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter7.md)：建立评估方法与统计意识。
-- [zero2Agent · Agent 应用实战](https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-practice)：连接 Trace、Eval 与应用迭代。
+- [阅读 07 · 评估与可观测性](./handbook#stage-07)：建立评估方法与统计意识。
+- [查看七个应用实战](./handbook#appendix-practice)：连接 Trace、Eval 与应用迭代。
 
 ## 08 · 训练与行为优化 {#stage-08}
 
@@ -227,10 +227,10 @@ outline: 2
 
 看到失败就默认微调；没有独立验证集；训练目标与线上任务指标没有关系。
 
-### 深读入口
+### 站内学习入口
 
-- [《深入理解 AI Agent》第 8 章](https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter8.md)：理解预训练、SFT 与 RL 的边界。
-- [zero2Agent · Agent 训练实战](https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-training)：补充训练工具链和工程流程。
+- [阅读 08 · 训练与行为优化](./handbook#stage-08)：理解预训练、SFT 与 RL 的边界。
+- [查看全部训练主题](./atlas#module-training)：补充训练工具链和工程流程。
 
 ## 09 · 持续进化 {#stage-09}
 
@@ -254,10 +254,10 @@ outline: 2
 
 线上失败直接进入训练集；Agent 可以未经审核修改自身生产代码；只有成功指标，没有安全回归指标。
 
-### 深读入口
+### 站内学习入口
 
-- [《深入理解 AI Agent》第 9 章](https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter9.md)：理解知识、指令、程序与参数四类更新。
-- [zero2Agent · Agent 应用实战](https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-practice)：参考应用侧评估与反馈闭环。
+- [阅读 09 · 持续进化](./handbook#stage-09)：理解知识、指令、程序与参数四类更新。
+- [查看七个应用实战](./handbook#appendix-practice)：连接评估与反馈闭环。
 
 ## 10 · 多 Agent 与生产项目 {#stage-10}
 
@@ -282,10 +282,10 @@ outline: 2
 
 只因为“多 Agent 更高级”而拆分；角色之间共享全部上下文；项目只能在作者电脑上演示。
 
-### 深读入口
+### 站内学习入口
 
-- [《深入理解 AI Agent》第 10 章](https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter10.md)：理解协作、共享、隔离与涌现边界。
-- [zero2Agent · Final Project](https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/final-project)：观察从需求到部署的完整工程拆解。
+- [阅读 10 · 多 Agent 与生产项目](./handbook#stage-10)：理解协作、共享与隔离边界。
+- [查看十二步生产项目](./handbook#appendix-project)：观察从需求到部署的完整拆解。
 
 ## 如何使用这份路线
 

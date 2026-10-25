@@ -882,30 +882,30 @@ body {
 
 @media (max-width: 640px) {
   .VPDoc {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .VPDoc h1 {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.25;
   }
 
   .VPDoc h2 {
-    margin-top: 46px;
-    font-size: 24px;
+    margin-top: 42px;
+    font-size: 22px;
     line-height: 1.35;
     scroll-margin-top: calc(var(--vp-nav-height) + 18px);
   }
 
   .VPDoc h3 {
-    margin-top: 30px;
-    font-size: 19px;
+    margin-top: 28px;
+    font-size: 18px;
     line-height: 1.45;
   }
 
   .VPDoc p,
   .VPDoc li {
-    line-height: 1.82;
+    line-height: 1.75;
   }
 
   .VPDoc ul,

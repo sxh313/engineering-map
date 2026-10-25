@@ -32,8 +32,6 @@ const stages = [
     question: '模型如何从一次回答变成可以行动的系统？',
     output: '一个可运行、可观察的 Model–Tool–Observation 循环',
     tags: ['Loop', 'Messages', 'Tool Calling'],
-    principle: 'https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter1.md',
-    engineering: 'https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-basic',
   },
   {
     id: 2,
@@ -41,8 +39,6 @@ const stages = [
     question: '有限上下文里，什么信息应该在什么时候进入模型？',
     output: '一组可复现的上下文消融实验与结果记录',
     tags: ['Context', 'Cache', 'Compaction'],
-    principle: 'https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter2.md',
-    engineering: 'https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-basic',
   },
   {
     id: 3,
@@ -50,8 +46,6 @@ const stages = [
     question: '如何让系统记得住、找得到，并能说明答案依据？',
     output: '带引用的检索回答、命中证据和失败样例',
     tags: ['Memory', 'Retrieval', 'Rerank'],
-    principle: 'https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter3.md',
-    engineering: 'https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-practice',
   },
   {
     id: 4,
@@ -59,8 +53,6 @@ const stages = [
     question: '怎样把模型意图变成受约束、可审计的真实动作？',
     output: '带 Schema、超时、错误分类和权限确认的工具',
     tags: ['Tools', 'MCP', 'Permission'],
-    principle: 'https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter4.md',
-    engineering: 'https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-sdk-frameworks',
   },
   {
     id: 5,
@@ -68,8 +60,6 @@ const stages = [
     question: '任务中断、失败或超长时，系统如何恢复并继续？',
     output: '可持久化状态、检查点、重试和恢复流程',
     tags: ['Runtime', 'Session', 'Recovery'],
-    principle: 'https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter5.md',
-    engineering: 'https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-pi',
   },
   {
     id: 6,
@@ -77,8 +67,6 @@ const stages = [
     question: 'Agent 如何安全地读写环境，并与长时间任务协作？',
     output: '一个带变更预览与人工确认的文件或浏览器任务',
     tags: ['Coding', 'Computer Use', 'HITL'],
-    principle: 'https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter6.md',
-    engineering: 'https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-codex',
   },
   {
     id: 7,
@@ -86,8 +74,6 @@ const stages = [
     question: '怎样证明一次改动真的让 Agent 变好了？',
     output: '小型评估集、Trace、指标与失败分类报告',
     tags: ['Eval', 'Trace', 'Metrics'],
-    principle: 'https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter7.md',
-    engineering: 'https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-practice',
   },
   {
     id: 8,
@@ -95,8 +81,6 @@ const stages = [
     question: '什么时候应该改提示、改系统，什么时候才需要训练模型？',
     output: '一份 SFT / RL / 不训练的选型说明或最小实验',
     tags: ['SFT', 'RL', 'Data'],
-    principle: 'https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter8.md',
-    engineering: 'https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-training',
   },
   {
     id: 9,
@@ -104,8 +88,6 @@ const stages = [
     question: '如何从真实失败轨迹中产生安全、可验证的改进？',
     output: '失败回流、候选改进、离线验证和发布门禁流程',
     tags: ['Feedback', 'Reflection', 'Release Gate'],
-    principle: 'https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter9.md',
-    engineering: 'https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/learn-agent-practice',
   },
   {
     id: 10,
@@ -113,8 +95,6 @@ const stages = [
     question: '什么时候值得拆成多个 Agent，如何控制协作成本？',
     output: '一个有角色边界、共享协议和验收证据的完整项目',
     tags: ['Multi-Agent', 'Delivery', 'Reliability'],
-    principle: 'https://github.com/bojieli/ai-agent-book/blob/dbc046eb896ac4e39aa19c7774c8bf49583b89a6/book/chapter10.md',
-    engineering: 'https://github.com/ranxi2001/zero2Agent/tree/79f7f91a836f8b45a7e9b55ea822830b68de455f/final-project',
   },
 ]
 
@@ -127,9 +107,9 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
   <main class="agent-hub">
     <nav class="mobile-study-dock" aria-label="AI Agent 手机学习导航">
       <a href="#agent-overview">概览</a>
-      <a href="#route-picker">选路线</a>
+      <a :href="withBase('/ai/atlas')">全部内容</a>
       <a href="#learning-stages">阶段</a>
-      <a :href="withBase('/ai/roadmap')">学习契约</a>
+      <a :href="withBase('/ai/handbook')">完整手册</a>
     </nav>
 
     <section id="agent-overview" class="agent-hero" aria-labelledby="agent-title">
@@ -140,8 +120,13 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
           将原理型教材与工程型教程重新组织成一条可验证路线。每一阶段都要留下代码、实验、Trace 或评估结果，而不是只读完一篇文章。
         </p>
         <div class="agent-actions">
-          <a :href="withBase('/ai/roadmap')" class="agent-primary">查看完整学习契约 <span>↗</span></a>
-          <a :href="withBase('/ai/sources')" class="agent-secondary">来源与许可</a>
+          <a :href="withBase('/ai/handbook')" class="agent-primary">打开站内完整手册 <span>↗</span></a>
+          <a :href="withBase('/ai/atlas')" class="agent-secondary">查看全部内容目录</a>
+        </div>
+        <div class="agent-census" aria-label="融合知识库规模">
+          <span><strong>10</strong> 原理章节</span>
+          <span><strong>133</strong> 工程文章</span>
+          <span><strong>13</strong> 融合模块</span>
         </div>
       </div>
 
@@ -206,9 +191,9 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
             <strong>{{ stage.output }}</strong>
           </div>
           <div class="stage-links">
-            <a :href="stage.principle" target="_blank" rel="noopener noreferrer">原理深读 ↗</a>
-            <a :href="stage.engineering" target="_blank" rel="noopener noreferrer">工程深读 ↗</a>
-            <a :href="withBase(`/ai/roadmap#stage-${String(stage.id).padStart(2, '0')}`)">学习契约 →</a>
+            <a :href="withBase(`/ai/handbook#stage-${String(stage.id).padStart(2, '0')}`)">站内讲解 →</a>
+            <a :href="withBase(`/ai/roadmap#stage-${String(stage.id).padStart(2, '0')}`)">动手实践 →</a>
+            <a :href="withBase('/ai/sources')">来源说明 →</a>
           </div>
         </article>
       </div>
@@ -219,7 +204,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
       <div>
         <p class="agent-overline">SOURCE BOUNDARY</p>
         <h2 id="boundary-title">综合，不等于搬运。</h2>
-        <p>本站重新设计学习顺序、练习与验收标准，不保存上游整章副本、原图或完整题库。每个深读入口都回到原作者仓库。</p>
+        <p>本站用原创中文讲解重新组织学习顺序、练习与验收标准。所有学习入口留在本站，原作者与许可证统一记录在来源页。</p>
       </div>
       <a :href="withBase('/ai/sources')">查看来源与许可证 <span>→</span></a>
     </section>
@@ -254,6 +239,9 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
 .agent-primary:hover { color: #fff; background: #224a69; }
 .agent-secondary { color: var(--sxh-navy); background: var(--sxh-white); }
 .agent-secondary:hover { color: var(--sxh-white); background: var(--sxh-navy); }
+.agent-census { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 24px; color: var(--sxh-muted); font-family: var(--sxh-mono); font-size: 10px; }
+.agent-census span { display: inline-flex; align-items: baseline; gap: 6px; }
+.agent-census strong { color: var(--agent-orange); font-size: 15px; }
 
 .loop-panel { position: relative; border: 1px solid var(--sxh-line); background: color-mix(in srgb, var(--sxh-paper) 92%, transparent); box-shadow: 18px 18px 0 color-mix(in srgb, var(--agent-navy) 7%, transparent); }
 .loop-panel::before { position: absolute; top: -1px; left: -1px; width: 92px; height: 5px; content: ''; background: var(--agent-orange); }
@@ -353,7 +341,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
     border: 1px solid var(--sxh-line);
     color: var(--agent-navy);
     background: var(--sxh-white);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     white-space: nowrap;
   }
@@ -373,18 +361,21 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
   .agent-hero, .path-selector, .stage-section, .source-boundary { width: min(100% - 32px, 1240px); }
   .agent-hero { padding-block: 48px 68px; gap: 44px; }
   .agent-overline { margin-bottom: 16px; font-size: 9px; line-height: 1.6; }
-  .agent-hero h1 { font-size: clamp(36px, 10.2vw, 46px); letter-spacing: -.055em; line-height: 1.12; }
-  .agent-lead { margin-top: 22px; font-size: 16px; line-height: 1.82; }
+  .agent-hero h1 { font-size: clamp(34px, 9.6vw, 42px); letter-spacing: -.055em; line-height: 1.12; }
+  .agent-lead { margin-top: 20px; font-size: 15px; line-height: 1.76; }
   .agent-actions, .agent-actions a { width: 100%; }
   .agent-actions { gap: 10px; margin-top: 28px; }
   .agent-actions a { min-height: 50px; }
   .agent-primary { justify-content: space-between !important; }
+  .agent-census { justify-content: space-between; gap: 10px; margin-top: 20px; }
+  .agent-census span { flex-direction: column; gap: 2px; }
+  .agent-census strong { font-size: 18px; }
   .loop-panel { box-shadow: 9px 9px 0 color-mix(in srgb, var(--agent-navy) 7%, transparent); }
   .loop-track { padding: 14px 20px; }
   .loop-track li { min-height: 51px; }
   .loop-return { padding-inline: 20px; line-height: 1.6; }
   .path-selector, .stage-section { padding-block: 68px; }
-  .path-intro h2, .stage-heading h2, .source-boundary h2 { font-size: clamp(30px, 8.5vw, 38px); line-height: 1.2; }
+  .path-intro h2, .stage-heading h2, .source-boundary h2 { font-size: clamp(27px, 7.8vw, 34px); line-height: 1.2; }
   .path-tabs {
     display: flex;
     gap: 10px;
@@ -405,7 +396,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
   }
   .path-tabs button:last-child { border: 1px solid var(--sxh-line); }
   .path-summary { flex-direction: column; }
-  .path-summary p { font-size: 15px; line-height: 1.75; }
+  .path-summary p { font-size: 14px; line-height: 1.72; }
   .path-summary span {
     padding-bottom: 5px;
     overflow-x: auto;
@@ -414,7 +405,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
     scrollbar-width: none;
   }
   .stage-heading { gap: 18px; }
-  .stage-heading > p { font-size: 15px; line-height: 1.8; }
+  .stage-heading > p { font-size: 14px; line-height: 1.75; }
   .stage-list { display: grid; gap: 14px; margin-top: 38px; border-top: 0; }
   .stage-row {
     grid-template-columns: 32px 1fr;
@@ -426,8 +417,8 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
     box-shadow: 0 8px 22px color-mix(in srgb, var(--agent-navy) 4%, transparent);
   }
   .stage-number { padding-top: 5px; font-size: 10px; }
-  .stage-main h3 { font-size: 22px; line-height: 1.25; }
-  .stage-main p { font-size: 15px; line-height: 1.72; }
+  .stage-main h3 { font-size: 20px; line-height: 1.25; }
+  .stage-main p { font-size: 14px; line-height: 1.68; }
   .stage-tags { margin-top: 12px; }
   .stage-tags span { padding: 5px 7px; font-size: 9px; }
   .stage-proof, .stage-links { grid-column: 2; grid-row: auto; }
@@ -438,7 +429,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
     border-left: 3px solid var(--agent-orange);
     background: color-mix(in srgb, var(--agent-orange) 6%, transparent);
   }
-  .stage-proof strong { font-size: 14px; line-height: 1.65; }
+  .stage-proof strong { font-size: 13px; line-height: 1.62; }
   .stage-links {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -459,7 +450,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
   }
   .source-boundary { grid-template-columns: 1fr; gap: 22px; margin-bottom: 82px; padding: 36px 28px; }
   .boundary-mark { font-size: 46px; }
-  .source-boundary div > p:last-child { font-size: 15px; line-height: 1.8; }
+  .source-boundary div > p:last-child { font-size: 14px; line-height: 1.75; }
   .source-boundary > a { min-height: 44px; align-items: center; }
   .source-boundary > a { grid-column: 1; }
 }

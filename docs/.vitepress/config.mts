@@ -135,6 +135,8 @@ export default defineConfig({
           text: 'AI Agent 综合路线',
           items: [
             { text: '路线首页', link: '/ai/' },
+            { text: '全部内容目录', link: '/ai/atlas' },
+            { text: '站内学习手册', link: '/ai/handbook' },
             { text: '完整学习契约', link: '/ai/roadmap' },
             { text: '来源与许可证', link: '/ai/sources' },
           ],
