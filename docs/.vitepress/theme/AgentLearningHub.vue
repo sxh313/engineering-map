@@ -117,7 +117,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
         <p class="agent-overline"><span>AI AGENT</span> / ORIGINAL STUDY MAP</p>
         <h1 id="agent-title">从“会调用模型”，<br><em>走到“能交付系统”。</em></h1>
         <p class="agent-lead">
-          将原理型教材与工程型教程重新组织成一条可验证路线。每一阶段都要留下代码、实验、Trace 或评估结果，而不是只读完一篇文章。
+          先用融合路线建立全局认知，再进入两套资料的完整原理讲解与工程实践。所有章节、配图和表格都可以在本站继续阅读。
         </p>
         <div class="agent-actions">
           <a :href="withBase('/ai/handbook')" class="agent-primary">打开站内完整手册 <span>↗</span></a>
@@ -141,6 +141,28 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
           <li><b>06</b><span>Evaluate</span><small>验证反馈</small></li>
         </ol>
         <div class="loop-return"><span>↳</span> 评估结果进入下一轮上下文</div>
+      </div>
+    </section>
+
+    <section class="source-library" aria-labelledby="source-library-title">
+      <div class="source-library-heading">
+        <p class="agent-overline">FULL READING LIBRARY</p>
+        <h2 id="source-library-title">两套资料，站内完整阅读</h2>
+        <p>原理、工程拆解、图表和项目实践都放在你的站点里，点开后继续在本站阅读。</p>
+      </div>
+      <div class="source-library-grid">
+        <a class="source-library-card" :href="withBase('/ai/library/ai-agent-book/')">
+          <span class="source-library-index">BOOK / 10 CHAPTERS</span>
+          <strong>AI Agent 原理与工程实践</strong>
+          <span>从 Agent 入门到上下文、记忆、工具、Coding Agent、多模态、评估、训练与多 Agent。</span>
+          <b>站内阅读全书 <i>↗</i></b>
+        </a>
+        <a class="source-library-card" :href="withBase('/ai/library/zero2agent/')">
+          <span class="source-library-index">ENGINEERING / 133 ARTICLES</span>
+          <strong>zero2Agent 工程课程</strong>
+          <span>Agent 基础、框架与 SDK、Harness、Claude Code、Codex、训练、实战和 OfferPilot 项目。</span>
+          <b>站内阅读全部课程 <i>↗</i></b>
+        </a>
       </div>
     </section>
 
@@ -203,8 +225,8 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
       <p class="boundary-mark" aria-hidden="true">≠</p>
       <div>
         <p class="agent-overline">SOURCE BOUNDARY</p>
-        <h2 id="boundary-title">综合，不等于搬运。</h2>
-        <p>本站用原创中文讲解重新组织学习顺序、练习与验收标准。所有学习入口留在本站，原作者与许可证统一记录在来源页。</p>
+        <h2 id="boundary-title">融合路线与原课程并行。</h2>
+        <p>融合路线整理学习顺序、练习与验收标准；原理讲解、工程实践、配图和表格也按许可收录。所有课程入口都在本站，来源与许可统一说明。</p>
       </div>
       <a :href="withBase('/ai/sources')">查看来源与许可证 <span>→</span></a>
     </section>
@@ -242,6 +264,20 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
 .agent-census { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 24px; color: var(--sxh-muted); font-family: var(--sxh-mono); font-size: 10px; }
 .agent-census span { display: inline-flex; align-items: baseline; gap: 6px; }
 .agent-census strong { color: var(--agent-orange); font-size: 15px; }
+
+.source-library { width: min(1240px, calc(100% - 48px)); margin: 0 auto; padding: 0 0 92px; }
+.source-library-heading { display: grid; grid-template-columns: .8fr 1.2fr; gap: 8px 56px; align-items: end; padding-bottom: 24px; border-bottom: 1px solid var(--sxh-line); }
+.source-library-heading .agent-overline { grid-column: 1 / -1; margin-bottom: 4px; }
+.source-library-heading h2 { margin: 0; font-size: clamp(28px, 3.6vw, 42px); letter-spacing: -.045em; line-height: 1.2; }
+.source-library-heading > p:last-child { margin: 0; color: var(--sxh-muted); font-size: 14px; line-height: 1.75; }
+.source-library-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
+.source-library-card { display: grid; gap: 13px; min-width: 0; min-height: 210px; padding: 24px; border: 1px solid var(--sxh-line); color: var(--agent-ink); background: color-mix(in srgb, var(--sxh-paper) 65%, white); transition: border-color .18s ease, transform .18s ease; }
+.source-library-card:hover { transform: translateY(-3px); border-color: var(--agent-orange); }
+.source-library-index { color: var(--agent-orange); font-family: var(--sxh-mono); font-size: 10px; font-weight: 700; letter-spacing: .1em; }
+.source-library-card strong { font-size: 22px; letter-spacing: -.03em; }
+.source-library-card > span:nth-of-type(2) { color: var(--sxh-muted); font-size: 13px; line-height: 1.75; }
+.source-library-card b { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid var(--sxh-line); color: var(--agent-blue); font-size: 12px; }
+.source-library-card i { font-size: 16px; font-style: normal; }
 
 .loop-panel { position: relative; border: 1px solid var(--sxh-line); background: color-mix(in srgb, var(--sxh-paper) 92%, transparent); box-shadow: 18px 18px 0 color-mix(in srgb, var(--agent-navy) 7%, transparent); }
 .loop-panel::before { position: absolute; top: -1px; left: -1px; width: 92px; height: 5px; content: ''; background: var(--agent-orange); }
@@ -306,6 +342,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
   .stage-row { grid-template-columns: 40px 1fr 120px; }
   .stage-proof { grid-column: 2; padding: 0; border: 0; }
   .stage-links { grid-column: 3; grid-row: 1 / span 2; }
+  .source-library-heading { grid-template-columns: 1fr; gap: 12px; }
   .source-boundary { grid-template-columns: 72px 1fr; }
   .source-boundary > a { grid-column: 2; width: fit-content; }
 }
@@ -359,6 +396,13 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
   }
 
   .agent-hero, .path-selector, .stage-section, .source-boundary { width: min(100% - 32px, 1240px); }
+  .source-library { width: min(100% - 32px, 1240px); padding-bottom: 68px; }
+  .source-library-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 18px; }
+  .source-library-card { min-height: 0; gap: 10px; padding: 18px; }
+  .source-library-card strong { font-size: 19px; }
+  .source-library-card > span:nth-of-type(2) { font-size: 13px; }
+  .source-library-heading h2 { font-size: clamp(26px, 7.2vw, 32px); }
+  .source-library-heading > p:last-child { font-size: 13px; }
   .agent-hero { padding-block: 48px 68px; gap: 44px; }
   .agent-overline { margin-bottom: 16px; font-size: 9px; line-height: 1.6; }
   .agent-hero h1 { font-size: clamp(34px, 9.6vw, 42px); letter-spacing: -.055em; line-height: 1.12; }
@@ -377,32 +421,25 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
   .path-selector, .stage-section { padding-block: 68px; }
   .path-intro h2, .stage-heading h2, .source-boundary h2 { font-size: clamp(27px, 7.8vw, 34px); line-height: 1.2; }
   .path-tabs {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
-    margin-inline: -16px;
-    padding-inline: 16px;
-    overflow-x: auto;
     border: 0;
-    scroll-padding-inline: 16px;
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
   }
-  .path-tabs::-webkit-scrollbar { display: none; }
   .path-tabs button {
-    flex: 0 0 142px;
+    min-width: 0;
     min-height: 82px;
     border: 1px solid var(--sxh-line);
-    scroll-snap-align: start;
+    padding-inline: 6px;
   }
   .path-tabs button:last-child { border: 1px solid var(--sxh-line); }
   .path-summary { flex-direction: column; }
   .path-summary p { font-size: 14px; line-height: 1.72; }
   .path-summary span {
     padding-bottom: 5px;
-    overflow-x: auto;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
     line-height: 1.7;
-    scrollbar-width: none;
   }
   .stage-heading { gap: 18px; }
   .stage-heading > p { font-size: 14px; line-height: 1.75; }

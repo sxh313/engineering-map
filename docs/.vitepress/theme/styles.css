@@ -881,6 +881,12 @@ body {
 }
 
 @media (max-width: 640px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
   .VPDoc {
     font-size: 15px;
   }
@@ -918,11 +924,54 @@ body {
   }
 
   .VPDoc table {
-    display: block;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
     max-width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .VPDoc th,
+  .VPDoc td {
+    min-width: 0;
+    padding: 8px 9px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .VPDoc .content-container,
+  .VPDoc .content,
+  .VPDoc .vp-doc {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .VPDoc {
+    overflow-wrap: anywhere;
+  }
+
+  .VPDoc img,
+  .VPDoc video,
+  .VPDoc iframe,
+  .VPDoc table {
+    max-width: 100%;
+  }
+
+  .VPDoc pre,
+  .VPDoc pre code,
+  .VPDoc div[class*="language-"] code {
+    max-width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .VPDoc div[class*="language-"] {
+    overflow-x: hidden;
   }
 
   .VPDoc div[class*="language-"] {

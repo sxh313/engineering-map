@@ -64,6 +64,56 @@ function createSidebar(course: CourseKey) {
   ]
 }
 
+function createLibraryTree(directory: string, route: string) {
+  return readdirSync(directory, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() || entry.name.endsWith('.md'))
+    .sort((a, b) => {
+      if (a.isDirectory() && !b.isDirectory()) return -1
+      if (!a.isDirectory() && b.isDirectory()) return 1
+      return a.name.localeCompare(b.name, 'zh-CN', { numeric: true })
+    })
+    .flatMap((entry) => {
+      if (entry.isDirectory()) {
+        const childDirectory = join(directory, entry.name)
+        const childRoute = `${route}/${entry.name}`
+        const childItems = createLibraryTree(childDirectory, childRoute)
+        const indexPath = join(childDirectory, 'index.md')
+        if (!existsSync(indexPath) && !childItems.length) return []
+        const fallbackTitles: Record<string, string> = {
+          book: '全书章节',
+          chapter6: '第六章配套示例',
+          chapter8: '第八章训练报告',
+        }
+        return [{
+          text: titleFromMarkdown(indexPath, fallbackTitles[entry.name] ?? entry.name),
+          ...(existsSync(indexPath) ? { link: `${childRoute}/` } : {}),
+          collapsed: true,
+          items: childItems.length ? childItems : undefined,
+        }]
+      }
+
+      if (entry.name === 'index.md') return []
+      const fallback = entry.name.replace(/\.md$/, '').replaceAll('-', ' ')
+      return [{
+        text: titleFromMarkdown(join(directory, entry.name), fallback),
+        link: `${route}/${entry.name.replace(/\.md$/, '')}`,
+      }]
+    })
+}
+
+function createSourceLibrarySidebar(source: 'zero2agent' | 'ai-agent-book') {
+  const directory = join(process.cwd(), 'docs', 'ai', 'library', source)
+  const route = `/ai/library/${source}`
+  return [{
+    text: source === 'zero2agent' ? 'zero2Agent 完整工程课程' : 'AI Agent Book 原理全书',
+    collapsed: false,
+    items: [
+      { text: '资料总览', link: `${route}/` },
+      ...createLibraryTree(directory, route),
+    ],
+  }]
+}
+
 export default defineConfig({
   lang: 'zh-CN',
   title: 'sxh · Engineering Map',
@@ -71,6 +121,7 @@ export default defineConfig({
   base,
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: [/^\/ai-library\/.*\.drawio$/, /^\/ai-library\/(?:zero2agent|ai-agent-book)\/LICENSE$/],
   head: [
     ['meta', { name: 'theme-color', content: '#17324d' }],
     ['link', { rel: 'icon', href: `${base}logo.svg`, type: 'image/svg+xml' }],
@@ -142,6 +193,8 @@ export default defineConfig({
           ],
         },
       ],
+      '/ai/library/zero2agent/': createSourceLibrarySidebar('zero2agent'),
+      '/ai/library/ai-agent-book/': createSourceLibrarySidebar('ai-agent-book'),
     },
     outline: { level: [2, 3], label: '本页目录' },
     search: {
