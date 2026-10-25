@@ -55,7 +55,7 @@ const courses = [
           <span>走到系统的边界。</span>
         </h1>
         <p class="hero-lead">
-          一份持续生长的后端与 AI 工程学习地图。沿着真实技术依赖组织知识，既可以从头系统学习，也可以在面试前快速定位薄弱环节。
+          一份持续生长的 AI 全栈工程学习地图。沿着真实技术依赖组织知识，既可以从后端基础开始，也可以进入 Agent 系统设计与项目实践。
         </p>
         <div class="hero-actions">
           <a class="action action-primary" :href="withBase('/fullstack/gin/')">
@@ -140,10 +140,10 @@ const courses = [
     </section>
 
     <section class="next-route" aria-labelledby="next-title">
-      <p class="overline">Next route / building</p>
-      <h2 id="next-title">后端是起点，AI 工程是下一段路。</h2>
-      <p>未来将在同一套知识地图中加入 LLM 基础、RAG、Agent Runtime、上下文工程与评估实践。</p>
-      <a :href="withBase('/ai/')">查看 AI Agent 路线规划 →</a>
+      <p class="overline">Next route / available</p>
+      <h2 id="next-title">后端是底座，Agent 是系统能力的延伸。</h2>
+      <p>AI Agent 综合路线已经开放：从最小循环、上下文与工具，走到 Runtime、评估、持续进化和生产项目。</p>
+      <a :href="withBase('/ai/')">进入 AI Agent 综合路线 →</a>
     </section>
   </main>
 </template>

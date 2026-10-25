@@ -108,16 +108,20 @@ body {
   color: var(--sxh-blue);
 }
 
-.VPPage:has(.knowledge-home) .VPContent {
+.VPPage:has(.knowledge-home) .VPContent,
+.VPPage:has(.agent-hub) .VPContent {
   padding: 0 !important;
 }
 
-.VPPage:has(.knowledge-home) .VPPage {
+.VPPage:has(.knowledge-home) .VPPage,
+.VPPage:has(.agent-hub) .VPPage {
   padding: 0;
 }
 
 .VPPage:has(.knowledge-home) .container,
-.VPPage:has(.knowledge-home) .content {
+.VPPage:has(.knowledge-home) .content,
+.VPPage:has(.agent-hub) .container,
+.VPPage:has(.agent-hub) .content {
   max-width: none !important;
   padding: 0 !important;
 }

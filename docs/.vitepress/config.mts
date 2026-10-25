@@ -132,8 +132,12 @@ export default defineConfig({
       ],
       '/ai/': [
         {
-          text: 'AI Agent 路线',
-          items: [{ text: '路线说明', link: '/ai/' }],
+          text: 'AI Agent 综合路线',
+          items: [
+            { text: '路线首页', link: '/ai/' },
+            { text: '完整学习契约', link: '/ai/roadmap' },
+            { text: '来源与许可证', link: '/ai/sources' },
+          ],
         },
       ],
     },

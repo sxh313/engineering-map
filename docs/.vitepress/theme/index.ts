@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import KnowledgeHome from './KnowledgeHome.vue'
 import ReviewTrainer from './ReviewTrainer.vue'
+import AgentLearningHub from './AgentLearningHub.vue'
 import './styles.css'
 
 export default {
@@ -8,5 +9,6 @@ export default {
   enhanceApp({ app }) {
     app.component('KnowledgeHome', KnowledgeHome)
     app.component('ReviewTrainer', ReviewTrainer)
+    app.component('AgentLearningHub', AgentLearningHub)
   },
 }
