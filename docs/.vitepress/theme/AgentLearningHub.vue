@@ -125,7 +125,14 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
 
 <template>
   <main class="agent-hub">
-    <section class="agent-hero" aria-labelledby="agent-title">
+    <nav class="mobile-study-dock" aria-label="AI Agent 手机学习导航">
+      <a href="#agent-overview">概览</a>
+      <a href="#route-picker">选路线</a>
+      <a href="#learning-stages">阶段</a>
+      <a :href="withBase('/ai/roadmap')">学习契约</a>
+    </nav>
+
+    <section id="agent-overview" class="agent-hero" aria-labelledby="agent-title">
       <div class="agent-hero-copy">
         <p class="agent-overline"><span>AI AGENT</span> / ORIGINAL STUDY MAP</p>
         <h1 id="agent-title">从“会调用模型”，<br><em>走到“能交付系统”。</em></h1>
@@ -152,7 +159,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
       </div>
     </section>
 
-    <section class="path-selector" aria-labelledby="path-title">
+    <section id="route-picker" class="path-selector" aria-labelledby="path-title">
       <div class="path-intro">
         <p class="agent-overline">CHOOSE A ROUTE</p>
         <h2 id="path-title">同一套知识，三种走法</h2>
@@ -177,7 +184,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
       </div>
     </section>
 
-    <section class="stage-section" aria-labelledby="stage-title">
+    <section id="learning-stages" class="stage-section" aria-labelledby="stage-title">
       <div class="stage-heading">
         <div>
           <p class="agent-overline">LEARNING CONTRACT</p>
@@ -225,7 +232,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
   --agent-navy: #17324d;
   --agent-blue: #285878;
   --agent-orange: #ef7b45;
-  overflow: hidden;
+  overflow-x: clip;
   color: var(--agent-ink);
   background:
     linear-gradient(90deg, color-mix(in srgb, var(--sxh-line) 40%, transparent) 1px, transparent 1px) center / 96px 100%,
@@ -233,6 +240,7 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
 }
 
 .agent-hub a { text-decoration: none; }
+.mobile-study-dock { display: none; }
 .agent-hero, .path-selector, .stage-section, .source-boundary { width: min(1240px, calc(100% - 48px)); margin-inline: auto; }
 .agent-hero { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr); gap: clamp(46px, 7vw, 96px); align-items: center; min-height: 690px; padding-block: 88px 100px; }
 .agent-overline { margin: 0 0 20px; color: var(--sxh-muted); font-family: var(--sxh-mono); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
@@ -315,24 +323,144 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
 }
 
 @media (max-width: 640px) {
+  .agent-hub {
+    background:
+      linear-gradient(90deg, color-mix(in srgb, var(--sxh-line) 34%, transparent) 1px, transparent 1px) center / 72px 100%,
+      var(--sxh-white);
+  }
+
+  .mobile-study-dock {
+    position: sticky;
+    z-index: 20;
+    top: var(--vp-nav-height);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
+    width: 100%;
+    padding: 8px max(16px, env(safe-area-inset-left));
+    border-block: 1px solid color-mix(in srgb, var(--sxh-line) 86%, transparent);
+    background: color-mix(in srgb, var(--sxh-white) 92%, transparent);
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--agent-navy) 7%, transparent);
+    backdrop-filter: blur(14px);
+  }
+
+  .mobile-study-dock a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 0 6px;
+    border: 1px solid var(--sxh-line);
+    color: var(--agent-navy);
+    background: var(--sxh-white);
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .mobile-study-dock a:last-child {
+    border-color: var(--agent-navy);
+    color: #fff;
+    background: var(--agent-navy);
+  }
+
+  #agent-overview,
+  #route-picker,
+  #learning-stages {
+    scroll-margin-top: calc(var(--vp-nav-height) + 64px);
+  }
+
   .agent-hero, .path-selector, .stage-section, .source-boundary { width: min(100% - 32px, 1240px); }
-  .agent-hero { padding-block: 62px 74px; gap: 52px; }
-  .agent-hero h1 { font-size: clamp(38px, 10.5vw, 50px); }
-  .agent-lead { font-size: 15px; }
+  .agent-hero { padding-block: 48px 68px; gap: 44px; }
+  .agent-overline { margin-bottom: 16px; font-size: 9px; line-height: 1.6; }
+  .agent-hero h1 { font-size: clamp(36px, 10.2vw, 46px); letter-spacing: -.055em; line-height: 1.12; }
+  .agent-lead { margin-top: 22px; font-size: 16px; line-height: 1.82; }
   .agent-actions, .agent-actions a { width: 100%; }
+  .agent-actions { gap: 10px; margin-top: 28px; }
+  .agent-actions a { min-height: 50px; }
   .agent-primary { justify-content: space-between !important; }
   .loop-panel { box-shadow: 9px 9px 0 color-mix(in srgb, var(--agent-navy) 7%, transparent); }
-  .path-selector, .stage-section { padding-block: 72px; }
-  .path-tabs { grid-template-columns: 1fr; }
-  .path-tabs button { min-height: 72px; border-right: 0; border-bottom: 1px solid var(--sxh-line); }
-  .path-tabs button:last-child { border-bottom: 0; }
+  .loop-track { padding: 14px 20px; }
+  .loop-track li { min-height: 51px; }
+  .loop-return { padding-inline: 20px; line-height: 1.6; }
+  .path-selector, .stage-section { padding-block: 68px; }
+  .path-intro h2, .stage-heading h2, .source-boundary h2 { font-size: clamp(30px, 8.5vw, 38px); line-height: 1.2; }
+  .path-tabs {
+    display: flex;
+    gap: 10px;
+    margin-inline: -16px;
+    padding-inline: 16px;
+    overflow-x: auto;
+    border: 0;
+    scroll-padding-inline: 16px;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+  .path-tabs::-webkit-scrollbar { display: none; }
+  .path-tabs button {
+    flex: 0 0 142px;
+    min-height: 82px;
+    border: 1px solid var(--sxh-line);
+    scroll-snap-align: start;
+  }
+  .path-tabs button:last-child { border: 1px solid var(--sxh-line); }
   .path-summary { flex-direction: column; }
-  .path-summary span { white-space: normal; line-height: 1.7; }
-  .stage-row { grid-template-columns: 30px 1fr; gap: 14px; padding-block: 26px; }
+  .path-summary p { font-size: 15px; line-height: 1.75; }
+  .path-summary span {
+    padding-bottom: 5px;
+    overflow-x: auto;
+    white-space: nowrap;
+    line-height: 1.7;
+    scrollbar-width: none;
+  }
+  .stage-heading { gap: 18px; }
+  .stage-heading > p { font-size: 15px; line-height: 1.8; }
+  .stage-list { display: grid; gap: 14px; margin-top: 38px; border-top: 0; }
+  .stage-row {
+    grid-template-columns: 32px 1fr;
+    gap: 14px;
+    min-height: auto;
+    padding: 22px 18px 20px;
+    border: 1px solid var(--sxh-line);
+    background: color-mix(in srgb, var(--sxh-white) 93%, var(--sxh-paper));
+    box-shadow: 0 8px 22px color-mix(in srgb, var(--agent-navy) 4%, transparent);
+  }
+  .stage-number { padding-top: 5px; font-size: 10px; }
+  .stage-main h3 { font-size: 22px; line-height: 1.25; }
+  .stage-main p { font-size: 15px; line-height: 1.72; }
+  .stage-tags { margin-top: 12px; }
+  .stage-tags span { padding: 5px 7px; font-size: 9px; }
   .stage-proof, .stage-links { grid-column: 2; grid-row: auto; }
-  .stage-links { flex-direction: row; flex-wrap: wrap; }
+  .stage-proof {
+    gap: 6px;
+    margin-top: 2px;
+    padding: 13px 14px;
+    border-left: 3px solid var(--agent-orange);
+    background: color-mix(in srgb, var(--agent-orange) 6%, transparent);
+  }
+  .stage-proof strong { font-size: 14px; line-height: 1.65; }
+  .stage-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+    width: 100%;
+    margin-top: 2px;
+  }
+  .stage-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 5px 3px;
+    border: 1px solid var(--sxh-line);
+    font-size: 10px;
+    line-height: 1.3;
+    text-align: center;
+  }
   .source-boundary { grid-template-columns: 1fr; gap: 22px; margin-bottom: 82px; padding: 36px 28px; }
   .boundary-mark { font-size: 46px; }
+  .source-boundary div > p:last-child { font-size: 15px; line-height: 1.8; }
+  .source-boundary > a { min-height: 44px; align-items: center; }
   .source-boundary > a { grid-column: 1; }
 }
 </style>

@@ -881,6 +881,60 @@ body {
 }
 
 @media (max-width: 640px) {
+  .VPDoc {
+    font-size: 16px;
+  }
+
+  .VPDoc h1 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .VPDoc h2 {
+    margin-top: 46px;
+    font-size: 24px;
+    line-height: 1.35;
+    scroll-margin-top: calc(var(--vp-nav-height) + 18px);
+  }
+
+  .VPDoc h3 {
+    margin-top: 30px;
+    font-size: 19px;
+    line-height: 1.45;
+  }
+
+  .VPDoc p,
+  .VPDoc li {
+    line-height: 1.82;
+  }
+
+  .VPDoc ul,
+  .VPDoc ol {
+    padding-left: 1.35rem;
+  }
+
+  .VPDoc a {
+    overflow-wrap: anywhere;
+  }
+
+  .VPDoc table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .VPDoc div[class*="language-"] {
+    margin-inline: -4px;
+    font-size: 13px;
+  }
+
+  .VPDoc blockquote {
+    margin-inline: 0;
+    padding: 14px 16px;
+  }
+
   .home-hero,
   .agent-priority,
   .learning-rail,
