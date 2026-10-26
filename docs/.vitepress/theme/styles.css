@@ -108,6 +108,33 @@ body {
   color: var(--sxh-blue);
 }
 
+.VPDoc .study-answer {
+  margin: 18px 0 24px;
+  border: 1px solid var(--sxh-line);
+  border-left: 4px solid var(--sxh-orange);
+  background: color-mix(in srgb, var(--sxh-paper) 72%, var(--sxh-white));
+}
+
+.VPDoc .study-answer summary {
+  padding: 13px 16px;
+  color: var(--sxh-blue);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.VPDoc .study-answer[open] summary {
+  border-bottom: 1px solid var(--sxh-line);
+}
+
+.VPDoc .study-answer > p {
+  margin: 0;
+  padding: 15px 17px 17px;
+  color: var(--sxh-muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
 .VPPage:has(.knowledge-home) .VPContent,
 .VPPage:has(.agent-hub) .VPContent {
   padding: 0 !important;
