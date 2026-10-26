@@ -152,16 +152,22 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
       </div>
       <div class="source-library-grid">
         <a class="source-library-card" :href="withBase('/ai/library/ai-agent-book/')">
-          <span class="source-library-index">BOOK / 10 CHAPTERS</span>
-          <strong>AI Agent 原理与工程实践</strong>
-          <span>从 Agent 入门到上下文、记忆、工具、Coding Agent、多模态、评估、训练与多 Agent。</span>
-          <b>站内阅读全书 <i>↗</i></b>
+          <span class="source-library-art book-art" aria-hidden="true"><i>AGENT<br>BOOK</i><small>10 CHAPTERS</small></span>
+          <span class="source-library-copy">
+            <span class="source-library-index">BOOK / 10 CHAPTERS</span>
+            <strong>AI Agent 原理与工程实践</strong>
+            <span>从 Agent 入门到上下文、记忆、工具、Coding Agent、多模态、评估、训练与多 Agent。</span>
+            <b>站内阅读全书 <i>↗</i></b>
+          </span>
         </a>
         <a class="source-library-card" :href="withBase('/ai/library/zero2agent/')">
-          <span class="source-library-index">ENGINEERING / 133 ARTICLES</span>
-          <strong>zero2Agent 工程课程</strong>
-          <span>Agent 基础、框架与 SDK、Harness、Claude Code、Codex、训练、实战和 OfferPilot 项目。</span>
-          <b>站内阅读全部课程 <i>↗</i></b>
+          <span class="source-library-art engineering-art" aria-hidden="true"><i /><i /><i /><small>ZERO → AGENT</small></span>
+          <span class="source-library-copy">
+            <span class="source-library-index">ENGINEERING / 133 ARTICLES</span>
+            <strong>zero2Agent 工程课程</strong>
+            <span>Agent 基础、框架与 SDK、Harness、Claude Code、Codex、训练、实战和 OfferPilot 项目。</span>
+            <b>站内阅读全部课程 <i>↗</i></b>
+          </span>
         </a>
       </div>
     </section>
@@ -271,11 +277,24 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
 .source-library-heading h2 { margin: 0; font-size: clamp(28px, 3.6vw, 42px); letter-spacing: -.045em; line-height: 1.2; }
 .source-library-heading > p:last-child { margin: 0; color: var(--sxh-muted); font-size: 14px; line-height: 1.75; }
 .source-library-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
-.source-library-card { display: grid; gap: 13px; min-width: 0; min-height: 210px; padding: 24px; border: 1px solid var(--sxh-line); color: var(--agent-ink); background: color-mix(in srgb, var(--sxh-paper) 65%, white); transition: border-color .18s ease, transform .18s ease; }
-.source-library-card:hover { transform: translateY(-3px); border-color: var(--agent-orange); }
+.source-library-card { position: relative; display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 22px; align-items: center; min-width: 0; min-height: 210px; padding: 20px; border: 1px solid var(--sxh-line); color: var(--agent-ink); background: color-mix(in srgb, var(--sxh-paper) 65%, white); transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
+.source-library-card:hover { transform: translateY(-3px); border-color: var(--agent-orange); box-shadow: 0 12px 28px color-mix(in srgb, var(--agent-navy) 8%, transparent); }
+.source-library-card:focus-visible { outline: 3px solid color-mix(in srgb, var(--agent-orange) 65%, transparent); outline-offset: 4px; }
+.source-library-art { position: relative; display: grid; width: 108px; height: 148px; overflow: hidden; place-items: center; color: #fff; background-color: var(--agent-navy); box-shadow: 5px 6px 0 color-mix(in srgb, var(--agent-navy) 14%, transparent); }
+.source-library-art::before { position: absolute; inset: 8px; border: 1px solid color-mix(in srgb, #fff 28%, transparent); content: ""; }
+.book-art { justify-items: start; padding-left: 18px; background: linear-gradient(145deg, #285878, #142534 76%); }
+.book-art::after { position: absolute; top: 0; bottom: 0; left: 8px; width: 3px; content: ""; background: var(--agent-orange); }
+.book-art > i { z-index: 1; font-family: var(--sxh-mono); font-size: 18px; font-style: normal; font-weight: 700; letter-spacing: -.06em; line-height: 1.12; }
+.book-art > small { z-index: 1; align-self: end; margin-bottom: 18px; color: #c3d0d9; font-family: var(--sxh-mono); font-size: 8px; }
+.engineering-art { display: flex; gap: 8px; background: linear-gradient(145deg, #243d51, #101b24); }
+.engineering-art::after { position: absolute; top: 50%; right: 15px; left: 15px; height: 1px; content: ""; background: color-mix(in srgb, #9fc1d8 55%, transparent); }
+.engineering-art > i { z-index: 1; width: 15px; height: 15px; border: 2px solid #a6c2d5; border-radius: 50%; background: var(--agent-navy); }
+.engineering-art > i:nth-of-type(2) { width: 21px; height: 21px; border-color: var(--agent-orange); background: #583b32; }
+.engineering-art > small { position: absolute; z-index: 1; bottom: 15px; color: #d6e0e6; font-family: var(--sxh-mono); font-size: 7px; letter-spacing: .04em; }
+.source-library-copy { display: grid; gap: 10px; min-width: 0; }
 .source-library-index { color: var(--agent-orange); font-family: var(--sxh-mono); font-size: 10px; font-weight: 700; letter-spacing: .1em; }
 .source-library-card strong { font-size: 22px; letter-spacing: -.03em; }
-.source-library-card > span:nth-of-type(2) { color: var(--sxh-muted); font-size: 13px; line-height: 1.75; }
+.source-library-copy > span:nth-of-type(2) { color: var(--sxh-muted); font-size: 13px; line-height: 1.75; }
 .source-library-card b { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid var(--sxh-line); color: var(--agent-blue); font-size: 12px; }
 .source-library-card i { font-size: 16px; font-style: normal; }
 
@@ -398,9 +417,18 @@ const visibleStages = computed(() => stages.filter((stage) => currentPath.value.
   .agent-hero, .path-selector, .stage-section, .source-boundary { width: min(100% - 32px, 1240px); }
   .source-library { width: min(100% - 32px, 1240px); padding-bottom: 68px; }
   .source-library-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 18px; }
-  .source-library-card { min-height: 0; gap: 10px; padding: 18px; }
-  .source-library-card strong { font-size: 19px; }
-  .source-library-card > span:nth-of-type(2) { font-size: 13px; }
+  .source-library-card { grid-template-columns: 74px minmax(0, 1fr); gap: 13px; min-height: 0; padding: 14px; }
+  .source-library-art { width: 74px; height: 104px; }
+  .book-art { padding-left: 13px; }
+  .book-art > i { font-size: 14px; }
+  .book-art > small { margin-bottom: 12px; font-size: 6px; }
+  .engineering-art { gap: 4px; }
+  .engineering-art > i { width: 11px; height: 11px; }
+  .engineering-art > i:nth-of-type(2) { width: 15px; height: 15px; }
+  .engineering-art > small { bottom: 11px; font-size: 5px; }
+  .source-library-copy { gap: 8px; }
+  .source-library-card strong { font-size: 17px; }
+  .source-library-copy > span:nth-of-type(2) { font-size: 12px; line-height: 1.6; }
   .source-library-heading h2 { font-size: clamp(26px, 7.2vw, 32px); }
   .source-library-heading > p:last-child { font-size: 13px; }
   .agent-hero { padding-block: 48px 68px; gap: 44px; }
