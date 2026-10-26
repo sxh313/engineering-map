@@ -8,20 +8,11 @@ outline: [2, 3]
 
 这份手册负责解释“为什么”和“怎么运转”，[完整学习契约](./roadmap)负责告诉你“做到什么才算掌握”。两者配合使用，整个学习过程都在本站完成。
 
+> **先说明内容层级：**这里是 10 个主题的融合导读，所以每节会比较精炼；如果你想看完整原理、逐篇工程拆解、图表和项目资料，直接进入[AI Agent Book 全书（10 章）](./library/ai-agent-book/)或[zero2Agent 工程课程（133 篇）](./library/zero2agent/)。两套资料已经放在本站，下面每个主题也附了对应的深入阅读入口。
+
 > 推荐顺序：先读一节站内讲解，再完成对应实践，最后用自测问题检查自己能否脱离原文说明原理。
 
-快速入口：
-
-- [01 · Agent 最小闭环](#stage-01)
-- [02 · 上下文工程](#stage-02)
-- [03 · Memory 与 RAG](#stage-03)
-- [04 · Tool、MCP 与 Skills](#stage-04)
-- [05 · Agent Runtime](#stage-05)
-- [06 · Coding Agent 与交互](#stage-06)
-- [07 · 评估与可观测性](#stage-07)
-- [08 · 训练与行为优化](#stage-08)
-- [09 · 持续进化](#stage-09)
-- [10 · 多 Agent 与生产项目](#stage-10)
+<StudyProgress />
 
 ## 01 · Agent 最小闭环 {#stage-01}
 
@@ -59,6 +50,8 @@ repeat until stopped:
 
 [去完成 01 阶段实践 →](./roadmap#stage-01)
 
+**本章深入阅读：**[AI Agent Book · Agent 入门](./library/ai-agent-book/book/chapter1) · [zero2Agent · 什么是 Agent](./library/zero2agent/learn-agent-basic/01-what-is-an-agent/) · [zero2Agent · Loop Engineering](./library/zero2agent/learn-agent-basic/10-loop-engineering/)
+
 ## 02 · 上下文工程 {#stage-02}
 
 ### 核心结论
@@ -87,6 +80,8 @@ repeat until stopped:
 3. 工具返回十万行日志时，你会怎样决定给模型看什么？
 
 [去完成 02 阶段实践 →](./roadmap#stage-02)
+
+**本章深入阅读：**[AI Agent Book · 上下文工程](./library/ai-agent-book/book/chapter2) · [zero2Agent · Context Engineering](./library/zero2agent/learn-agent-basic/13-context-engineering/) · [zero2Agent · Context、State 与 Memory](./library/zero2agent/learn-agent-basic/06-memory-patterns/)
 
 ## 03 · Memory 与 RAG {#stage-03}
 
@@ -121,6 +116,8 @@ Memory 解决“系统应该记住什么”，RAG 解决“回答当前问题需
 
 [去完成 03 阶段实践 →](./roadmap#stage-03)
 
+**本章深入阅读：**[AI Agent Book · 记忆与 RAG](./library/ai-agent-book/book/chapter3) · [zero2Agent · 高级 RAG 与记忆架构](./library/zero2agent/learn-agent-basic/16-advanced-rag-memory/) · [zero2Agent · RAG 检索面试专题](./library/zero2agent/learn-agent-interview/09-rag-retrieval/)
+
 ## 04 · Tool、MCP 与 Skills {#stage-04}
 
 ### 核心结论
@@ -151,6 +148,8 @@ Tool 是系统可以执行的动作，MCP 是连接工具与数据源的一种�
 
 [去完成 04 阶段实践 →](./roadmap#stage-04)
 
+**本章深入阅读：**[AI Agent Book · 工具](./library/ai-agent-book/book/chapter4) · [zero2Agent · Tool Calling 基础](./library/zero2agent/learn-agent-basic/05-tool-calling-basics/) · [zero2Agent · 工具管理与权限](./library/zero2agent/learn-agent-interview/02-tool-management/)
+
 ## 05 · Agent Runtime {#stage-05}
 
 ### 核心结论
@@ -180,6 +179,8 @@ Runtime 管理的是一个任务从开始到结束的生命周期：状态、检
 
 [去完成 05 阶段实践 →](./roadmap#stage-05)
 
+**本章深入阅读：**[AI Agent Book · Coding Agent](./library/ai-agent-book/book/chapter5) · [zero2Agent · Agent Infra](./library/zero2agent/learn-agent-basic/09-agent-infra/) · [zero2Agent · Harness Session Log](./library/zero2agent/learn-deepseek-harness/07-session-log/)
+
 ## 06 · Coding Agent 与交互 {#stage-06}
 
 ### 核心结论
@@ -205,6 +206,8 @@ Computer Use 和浏览器 Agent 也遵循相同原则：先观察，再定位，
 3. Agent 自己说“测试通过”为什么不算验证证据？
 
 [去完成 06 阶段实践 →](./roadmap#stage-06)
+
+**本章深入阅读：**[AI Agent Book · Coding Agent](./library/ai-agent-book/book/chapter5) · [AI Agent Book · 交互](./library/ai-agent-book/book/chapter6) · [zero2Agent · Claude Code 工具调用](./library/zero2agent/learn-claude-code/02-tool-use/)
 
 ## 07 · 评估与可观测性 {#stage-07}
 
@@ -236,6 +239,8 @@ Trace 解释一次任务发生了什么，Eval 判断系统在一组任务上表
 
 [去完成 07 阶段实践 →](./roadmap#stage-07)
 
+**本章深入阅读：**[AI Agent Book · 评估](./library/ai-agent-book/book/chapter8) · [zero2Agent · Agent 评估](./library/zero2agent/learn-agent-basic/11-agent-evaluation/) · [zero2Agent · 训练中的评估](./library/zero2agent/learn-agent-training/05-agent-eval/)
+
 ## 08 · 训练与行为优化 {#stage-08}
 
 ### 核心结论
@@ -257,6 +262,8 @@ Trace 解释一次任务发生了什么，Eval 判断系统在一组任务上表
 3. 训练指标改善后，为什么仍要检查真实任务成功率？
 
 [去完成 08 阶段实践 →](./roadmap#stage-08)
+
+**本章深入阅读：**[AI Agent Book · 训练](./library/ai-agent-book/book/chapter9) · [zero2Agent · Agent SFT](./library/zero2agent/learn-agent-training/01-agent-sft/) · [zero2Agent · Agent RL](./library/zero2agent/learn-agent-training/02-agent-rl/)
 
 ## 09 · 持续进化 {#stage-09}
 
@@ -288,6 +295,8 @@ Trace 解释一次任务发生了什么，Eval 判断系统在一组任务上表
 
 [去完成 09 阶段实践 →](./roadmap#stage-09)
 
+**本章深入阅读：**[AI Agent Book · 持续进化与多 Agent](./library/ai-agent-book/book/chapter10) · [zero2Agent · Agent 自进化](./library/zero2agent/learn-agent-basic/15-agent-self-evolution/) · [zero2Agent · Autonomous Agents](./library/zero2agent/learn-claude-code/11-autonomous-agents/)
+
 ## 10 · 多 Agent 与生产项目 {#stage-10}
 
 ### 核心结论
@@ -317,6 +326,8 @@ Trace 解释一次任务发生了什么，Eval 判断系统在一组任务上表
 3. 怎样证明多 Agent 架构的收益超过协调成本？
 
 [去完成 10 阶段实践 →](./roadmap#stage-10)
+
+**本章深入阅读：**[AI Agent Book · 持续进化与多 Agent](./library/ai-agent-book/book/chapter10) · [zero2Agent · 单 Agent 与多 Agent](./library/zero2agent/learn-agent-basic/08-single-vs-multi-agent/) · [zero2Agent · OfferPilot 生产项目](./library/zero2agent/final-project/)
 
 ## 附录 A · 框架与 SDK 选型 {#appendix-frameworks}
 
