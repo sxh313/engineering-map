@@ -464,7 +464,7 @@ Trace 解释一次任务发生了什么，Eval 判断系统在一组任务上表
 
 [去完成 07 阶段实践 →](./roadmap#stage-07)
 
-**本章深入阅读：**[AI Agent Book · 评估](./library/ai-agent-book/book/chapter8) · [zero2Agent · Agent 评估](./library/zero2agent/learn-agent-basic/11-agent-evaluation/) · [zero2Agent · 训练中的评估](./library/zero2agent/learn-agent-training/05-agent-eval/)
+**本章深入阅读：**[AI Agent Book · Agent 的评估](./library/ai-agent-book/book/chapter7) · [zero2Agent · Agent 评估](./library/zero2agent/learn-agent-basic/11-agent-evaluation/) · [zero2Agent · 训练中的评估](./library/zero2agent/learn-agent-training/05-agent-eval/)
 
 ## 08 · 训练与行为优化 {#stage-08}
 
@@ -517,7 +517,7 @@ Trace 解释一次任务发生了什么，Eval 判断系统在一组任务上表
 
 [去完成 08 阶段实践 →](./roadmap#stage-08)
 
-**本章深入阅读：**[AI Agent Book · 训练](./library/ai-agent-book/book/chapter9) · [zero2Agent · Agent SFT](./library/zero2agent/learn-agent-training/01-agent-sft/) · [zero2Agent · Agent RL](./library/zero2agent/learn-agent-training/02-agent-rl/)
+**本章深入阅读：**[AI Agent Book · 模型后训练](./library/ai-agent-book/book/chapter8) · [zero2Agent · Agent SFT](./library/zero2agent/learn-agent-training/01-agent-sft/) · [zero2Agent · Agent RL](./library/zero2agent/learn-agent-training/02-agent-rl/)
 
 ## 09 · 持续进化 {#stage-09}
 
@@ -579,7 +579,7 @@ Trace 解释一次任务发生了什么，Eval 判断系统在一组任务上表
 
 [去完成 09 阶段实践 →](./roadmap#stage-09)
 
-**本章深入阅读：**[AI Agent Book · 持续进化与多 Agent](./library/ai-agent-book/book/chapter10) · [zero2Agent · Agent 自进化](./library/zero2agent/learn-agent-basic/15-agent-self-evolution/) · [zero2Agent · Autonomous Agents](./library/zero2agent/learn-claude-code/11-autonomous-agents/)
+**本章深入阅读：**[AI Agent Book · Agent 的持续进化](./library/ai-agent-book/book/chapter9) · [zero2Agent · Agent 自进化](./library/zero2agent/learn-agent-basic/15-agent-self-evolution/) · [zero2Agent · Autonomous Agents](./library/zero2agent/learn-claude-code/11-autonomous-agents/)
 
 ## 10 · 多 Agent 与生产项目 {#stage-10}
 
@@ -647,7 +647,7 @@ Orchestrator 负责拆分、预算和汇总，专业 Agent 只接收完成子任
 
 [去完成 10 阶段实践 →](./roadmap#stage-10)
 
-**本章深入阅读：**[AI Agent Book · 持续进化与多 Agent](./library/ai-agent-book/book/chapter10) · [zero2Agent · 单 Agent 与多 Agent](./library/zero2agent/learn-agent-basic/08-single-vs-multi-agent/) · [zero2Agent · OfferPilot 生产项目](./library/zero2agent/final-project/)
+**本章深入阅读：**[AI Agent Book · 多 Agent 协作](./library/ai-agent-book/book/chapter10) · [zero2Agent · 单 Agent 与多 Agent](./library/zero2agent/learn-agent-basic/08-single-vs-multi-agent/) · [zero2Agent · OfferPilot 生产项目](./library/zero2agent/final-project/)
 
 ## 附录 A · 框架与 SDK 选型 {#appendix-frameworks}
 
