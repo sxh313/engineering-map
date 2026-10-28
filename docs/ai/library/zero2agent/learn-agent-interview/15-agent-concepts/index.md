@@ -434,7 +434,7 @@ Skills、MCP、Function Calling 解决的是 Agent 能力扩展的**三个不同
 
 **为什么有了 FC/MCP 还需要 Skills**：
 
-FC 和 MCP 解决“Agent 能调用什么工具”，但不解决**“Agent 该怎么组合使用这些工具完成一个复杂任务”**。举例：
+FC 和 MCP 解决“Agent 能调用什么工具”，但不解决 **“Agent 该怎么组合使用这些工具完成一个复杂任务”**。举例：
 
 ```text
 有 MCP/FC：Agent 能查数据库、能读文件、能跑代码

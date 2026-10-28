@@ -15,7 +15,7 @@
 
 ## 1.1 什么是 Redis
 
-**Redis（Remote Dictionary Server）**是一个开源的**内存数据库**。注意三个关键词：
+**Redis（Remote Dictionary Server）** 是一个开源的 **内存数据库**。注意三个关键词：
 
 | 关键词 | 含义 |
 |--------|------|

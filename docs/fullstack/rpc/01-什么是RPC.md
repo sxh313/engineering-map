@@ -15,7 +15,7 @@
 
 ## 1.1 什么是 RPC
 
-**RPC（Remote Procedure Call，远程过程调用）**让你像调用本地函数一样调用远程服务器上的函数。
+**RPC（Remote Procedure Call，远程过程调用）** 让你像调用本地函数一样调用远程服务器上的函数。
 
 ```
 本地函数调用：

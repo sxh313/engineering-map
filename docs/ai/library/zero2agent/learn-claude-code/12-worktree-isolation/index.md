@@ -503,7 +503,7 @@ Claude Code 的做法更精细：通过 `saveWorktreeState()` 将 worktree sessi
 
 ## 设计哲学：安全是默认，便利是可选
 
-Worktree 隔离是设计指南**第二原则——安全是默认（Secure by Default）**的最佳案例。
+Worktree 隔离是设计指南 **第二原则——安全是默认（Secure by Default）** 的最佳案例。
 
 Claude Code 的 5 层权限模型：
 
